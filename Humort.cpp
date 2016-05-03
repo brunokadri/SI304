@@ -10,11 +10,11 @@ void autoajuda (int humor)
 {
 	if (humor <= 0.04)
 	{
-		printf("A depressão é coisa muito séria, contínua e complexa. Estar triste é estar atento a si próprio, é estar desapontado com alguém, com vários ou consigo mesmo, é estar um pouco cansado de certas repetições, é descobrir-se frágil num dia qualquer, sem razão aparente - as razões têm essa mania de serem discretas.\n");
+		printf("A depressÃ£o Ã© coisa muito sÃ©ria, contÃ­nua e complexa. Estar triste Ã© estar atento a si prÃ³prio, Ã© estar desapontado com alguÃ©m, com vÃ¡rios ou consigo mesmo, Ã© estar um pouco cansado de certas repetiÃ§Ãµes, Ã© descobrir-se frÃ¡gil num dia qualquer, sem razÃ£o aparente - as razÃµes tÃªm essa mania de serem discretas.\n");
 	}
 	else if((humor > 0.04) && (humor <= 0.08 ))
 	{
-		printf("As dificuldades da vida de maneira alguma servem pra ficarmos abalados, abatidos ou depressivos, mas devem servir de estímulo para nós vencermos e conquistarmos.\n");
+		printf("As dificuldades da vida de maneira alguma servem pra ficarmos abalados, abatidos ou depressivos, mas devem servir de estÃ­mulo para nÃ³s vencermos e conquistarmos.\n");
 	}
 	else if((humor > 0.08) && (humor <= 0.16 ))
 	{
@@ -22,7 +22,7 @@ void autoajuda (int humor)
 	}
 	else if((humor > 0.16) && (humor <= 0.32 ))
 	{
-		printf("Volta teu rosto sempre na direção do sol e então as sombras ficarão para trás.\n");
+		printf("Volta teu rosto sempre na direÃ§Ã£o do sol e entÃ£o as sombras ficarÃ£o para trÃ¡s.\n");
 	}
 	return;
 }
@@ -31,15 +31,15 @@ void dicas (int humor)
 {
 	if (humor <= 0.04)
 	{
-		printf("Não pense que as pessoas não se importe com você, evite ficar perto de janelas e materiais cortantes, procure seu terapeuta imediatamente\n");
+		printf("NÃ£o pense que as pessoas nÃ£o se importe com vocÃª, evite ficar perto de janelas e materiais cortantes, procure seu terapeuta imediatamente\n");
 	}
 	else if((humor > 0.04) && (humor <= 0.08 ))
 	{
-		printf("Saia um pouco da cama, converse com alguém, evite ficar em lugares mal iluminados.\n");
+		printf("Saia um pouco da cama, converse com alguÃ©m, evite ficar em lugares mal iluminados.\n");
 	}
 	else if((humor > 0.08) && (humor <= 0.16 ))
 	{
-		printf("Abrace algém hoje, tenha contato físico e social.\n");
+		printf("Abrace algÃ©m hoje, tenha contato fÃ­sico e social.\n");
 	}
 	else if((humor > 0.16) && (humor <= 0.32 ))
 	{
@@ -112,9 +112,9 @@ float felicimometro=0.0;
 char nome[20];
 
 printf("Digite seu nome: ");
-scanf("%s",&nome);
+gets("%s",&nome);
 
-printf("Olá %s, vamos verificar o seu humor, por favor responda as perguntas a serguir: \n", nome);
+printf("OlÃ¡ %s, vamos verificar o seu humor, por favor responda as perguntas a serguir: \n\n", nome);
 printf("Vamos comecar!\n");
 printf("1 - Voce ja sorriu hoje?\n");
 printf(" 1 - Sim, mais de uma vez!\n 2 - Sim, uma vez!\n 3 - Talvez uma vez, sei la :(\n 4 - Nao costumo sorrir.\n");
@@ -126,8 +126,8 @@ if((opc>4)||(opc<1)) {
 else
 	felicimometro+=escolha(opc,felicimometro);
 
-printf("2 - Quantas pessoas voce abracou hoje?\n");
-printf("1 - Quatro ou mais!\n 2 - Duas ou tres\n 3 - Abracei minha vozinha no natal passado, vale?\n 4 - Nao gosto de abracos.\n");
+printf("2 - Quantas pessoas voce abracou hoje?\n\n");
+printf(" 1 - Quatro ou mais!\n 2 - Duas ou tres\n 3 - Abracei minha vozinha no natal passado, vale?\n 4 - Nao gosto de abracos.\n");
 scanf("%d",&opc);
 if((opc>4)||(opc<1)) {
 	printf("Nao existe essa opcao, recomece o teste!");
@@ -136,8 +136,8 @@ if((opc>4)||(opc<1)) {
 else
 	felicimometro+=escolha(opc,felicimometro);
 
-printf("3 - Como esta o dia hoje?\n");
-printf("1 - Muito bonito, bom pra passear la fora\n 2 - Eh, ate que esta bom.\n 3 - Ontem estava melhor.\n 4 - Nao sei, nao sair pra ver\n");
+printf("3 - Como esta o dia hoje?\n\n");
+printf(" 1 - Muito bonito, bom pra passear la fora\n 2 - Eh, ate que esta bom.\n 3 - Ontem estava melhor.\n 4 - Nao sei, nao sair pra ver\n");
 scanf("%d",&opc);
 if((opc>4)||(opc<1)) {
 	printf("Nao existe essa opcao, recomece o teste!");
@@ -146,11 +146,11 @@ if((opc>4)||(opc<1)) {
 else
 	felicimometro+=escolha(opc,felicimometro);
 
-printf("4 - A vida é?\n");
-printf("1 - ...bonita, eh bonita e eh bonita!!\n 2 - ...boa na maior parte do tempo.\n 3 - ...feliz em certas circunstancias.\n 4 - ...um poço de solidao.\n");
+printf("4 - A vida Ã©?\n\n");
+printf(" 1 - ...bonita, eh bonita e eh bonita!!\n 2 - ...boa na maior parte do tempo.\n 3 - ...feliz em certas circunstancias.\n 4 - ...um poÃ§o de solidao.\n");
 scanf("%d",&opc);
 if((opc>4)||(opc<1)) {
-	printf("Não existe essa opcao, recomece o teste!");
+	printf("NÃ£o existe essa opcao, recomece o teste!");
 	return 0;
 }
 else
@@ -159,12 +159,12 @@ else
 
 
 
-printf("%s, escolha as informações que você deseja que sejam geradas: ");
-printf("[1] Gráfico\n");
+printf("%s, escolha as informaÃ§Ãµes que vocÃª deseja que sejam geradas: \n",nome);
+printf("[1] GrÃ¡fico\n");
 printf("[2] Dicas\n");
 printf("[3] Frase de autoajuda\n\n");
 
-printf("Escolha uma das três opções, digite o seu número correspondente e confira o que foi gerado!\n");
+printf("Escolha uma das trÃªs opÃ§Ãµes, digite o seu nÃºmero correspondente e confira o que foi gerado!\n");
 scanf("%d",&menugera);
 
 switch (menugera)
@@ -173,6 +173,7 @@ switch (menugera)
 		desenhaBordas();
 		luznofimdotunel(felicimometro);
 		salvaluz();
+		printf("O grafico foi salvo no seu sistema de arquivos"\n);
 		break;
 	case 2:
 		dicas(felicimometro);
@@ -183,7 +184,7 @@ switch (menugera)
 }
 
 
-printf("Pronto! Voce terminou o teste, volte amanhã.\n");
+printf("Pronto! Voce terminou o teste, volte amanhÃ£.\n");
 	
 return 0;
 }
