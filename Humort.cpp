@@ -112,8 +112,11 @@ float felicimometro=0.0;
 char nome[20];
 
 printf("Digite seu nome: ");
-gets("%s",&nome);
-
+gets(nome);
+if(nome[0] == NULL){
+	printf("Recomece o teste e digite seu nome!\n");
+	return 0;
+}
 printf("Olá %s, vamos verificar o seu humor, por favor responda as perguntas a serguir: \n\n", nome);
 printf("Vamos comecar!\n");
 printf("1 - Voce ja sorriu hoje?\n");
@@ -166,14 +169,17 @@ printf("[3] Frase de autoajuda\n\n");
 
 printf("Escolha uma das três opções, digite o seu número correspondente e confira o que foi gerado!\n");
 scanf("%d",&menugera);
-
+if((menugera>3)||(menugera<1)) {
+	printf("Nao existe essa opcao, recomece o teste!");
+	return 0;
+}
 switch (menugera)
 {
 	case 1:
 		desenhaBordas();
 		luznofimdotunel(felicimometro);
 		salvaluz();
-		printf("O grafico foi salvo no seu sistema de arquivos"\n);
+		printf("O grafico foi salvo no seu sistema de arquivos.\n");
 		break;
 	case 2:
 		dicas(felicimometro);
